@@ -1,0 +1,39 @@
+
+@font-face {
+    font-family: Inter;
+    src: url('./lib/assets/fonts/Inter.ttf');
+}
+
+:root{
+    --surface: #f6f6f6;
+    --background: #fff;
+    --primary: #F78F42;
+    --text: #131313;
+    --text_secondary: #898989;
+    --horizontal_line: #e7e7e7;
+    --progressbar: #eee;
+    --tooltip_color: #eee;
+    --radius12: 12px;
+
+}
+
+[data-theme= 'dark']{
+    --surface: #131313;
+    --background: #1c1c1c;
+    --primary: #F78F42;
+    --text: #fff;
+    --text_secondary: #8d8d8d;
+    --horizontal_line: #333;
+    --progressbar: #131313;
+    --tooltip_color: #131313;
+    --radius12: 12px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--surface);
+}
