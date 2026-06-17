@@ -50,7 +50,7 @@
         display: flex;
         flex-direction: column;
         font-family: "Inter", sans-serif;
-        width: 538px;
+        max-width: 538px;
         text-align: center;
         gap: 16px;
     }
@@ -66,5 +66,11 @@
         width: 100%;
         height: fit-content;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media(min-width: 1024px){
+        .projects{
+            justify-content: start;
+        }
     }
 </style>

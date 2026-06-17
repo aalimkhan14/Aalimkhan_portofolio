@@ -20,14 +20,16 @@
     .sub_parent{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        gap: 24px;
     }
     .left{
         display: flex;
         flex-direction: column;
         gap: 12px;
-        width: 30%;
+        width: 100%;
+        padding-left: 20px;
     }
     .title{
         font-family: 'Inter', sans-serif;
@@ -62,7 +64,7 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        width: 60%;
+        width: 100%;
     }
     .certificate{
         font-family: 'Inter', sans-serif;
@@ -77,5 +79,18 @@
         font-weight: 400;
         line-height: 24px;
         color: var(--text_secondary)
+    }
+
+    @media(min-width: 1500px){
+        .sub_parent{
+            flex-direction: row;
+        }
+        .left{
+            width: 30%;
+            padding: 0;
+        }
+        .right{
+            width: 70%;
+        }
     }
 </style>

@@ -1,10 +1,13 @@
 <script lang="ts">
-    let name = '';
-    let email = '';
-    let subject = '';
-    let message = '';
+    import { writable } from 'svelte/store';
 
-    async function sendEmail() {
+    const name = writable<string>('');
+    const email = writable<string>('');
+    const subject = writable<string>('');
+    const message = writable<string>('');
+
+    async function sendEmail(event: SubmitEvent) {
+        event.preventDefault;
         const serviceId = 'service_k1e4pkd';
         const templateId = 'template_9ei1bin';
         const publicKey = 'QpoQ6AEjayFPehYMQ';
@@ -20,10 +23,10 @@
                     template_id: templateId,
                     user_id: publicKey,
                     template_params: {
-                        user_name: name,
-                        user_email: email,
-                        subject: subject,
-                        message: message
+                        user_name: $name,
+                        user_email: $email,
+                        subject: $subject,
+                        message: $message
                     }
                 })
             });
@@ -35,10 +38,10 @@
             if (response.ok) {
                 alert("Email sent successfully ");
 
-                name = '';
-                email = '';
-                subject = '';
-                message = '';
+                name.set('');
+                email.set('');
+                subject.set('');
+                message.set('');
             } else {
                 alert("Failed to send email ");
             }
@@ -50,29 +53,29 @@
     }
 </script>
 
-<form on:submit|preventDefault={sendEmail}>
+<form onsubmit={sendEmail}>
     <h2 class="head">Leave a Message</h2>
 
     <div class="identify">
         <label>
             Name
-            <input type="text" bind:value={name} />
+            <input type="text" bind:value={$name} />
         </label>
 
         <label>
             Email
-            <input type="text" bind:value={email} />
+            <input type="text" bind:value={$email} />
         </label>
     </div>
 
     <label>
         Subject
-        <input type="text" bind:value={subject} />
+        <input type="text" bind:value={$subject} />
     </label>
 
     <label>
         Message
-        <textarea bind:value={message}></textarea>
+        <textarea bind:value={$message}></textarea>
     </label>
 
     <input type="submit" value="Send Message" />
@@ -82,7 +85,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding: 20px;
         gap: 20px;
         background-color: var(--background);
         border-radius: 12px;
@@ -107,11 +110,11 @@
     }
     .identify{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 24px;
     }
     .identify label{
-        width: 50%;
+        width: 100%;
     }
     input[type="text"]{
         padding: 12px 16px;
@@ -144,8 +147,16 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
-        color: #131313;
+        color: var(--surface);
         width: fit-content;
         margin-top: 4px;
+    }
+    @media(min-width: 1024px){
+        .identify{
+            flex-direction: row;
+        }
+        .identify label{
+            width: 50%;
+        }
     }
 </style>

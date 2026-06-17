@@ -38,25 +38,52 @@
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    width: 438px;
+    max-width: 438px;
     text-align: center;
     gap: 16px;
   }
   .layout{
-    width: 1020px;
+    width: 100%;
+    max-width: 1020px;
     height: fit-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
+    align-items: center;
+
   }
   .email{
     display: flex;
-    width: 68%;
+    width: 100%;
   }
   .contact{
     display: flex;
-    width: 32%;
+    width: 100%;
     flex-direction: column;
     gap: 24px;
+  }
+  @media(min-width: 700px){
+    .layout{
+      flex-direction: row;
+      align-items: start;
+    }
+    .email{
+      width: 50%;
+      transition: 0.3s;
+    }
+    .contact{
+      width: 50%;
+      transition: 0.3s;
+    }
+  }
+  @media(min-width: 1024px){
+    .email{
+      width: 68%;
+      transition: 0.3s;
+    }
+    .contact{
+      width: 32%;
+      transition: 0.3s;
+    }
   }
 </style>

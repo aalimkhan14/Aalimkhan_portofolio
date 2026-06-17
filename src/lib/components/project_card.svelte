@@ -14,7 +14,7 @@
 
 <style>
     .sub_parent {
-        width: 324px;
+        width: 100%;
         height: 324px;
         background-image: var(--background);
         background-position: center;
@@ -61,6 +61,12 @@
     .sub_parent:hover .button{
         display: flex;
         transition: 0.3s;
+    }
+
+    @media(min-width: 720px){
+        .sub_parent{
+            width: 324px;
+        }
     }
     
 </style>

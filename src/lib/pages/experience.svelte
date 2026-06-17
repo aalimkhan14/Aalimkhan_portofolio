@@ -46,6 +46,7 @@
     width: 100%;
     align-items: center;
     gap: 48px;
+    align-self: center;
   }
   .title {
     display: flex;
@@ -56,7 +57,7 @@
     gap: 16px;
   }
   .table{
-    width: 1020px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -69,5 +70,15 @@
     height: 1px;
     background-color: var(--horizontal_line);
   }
-  
+  @media(min-width: 700px){
+    .parent{
+      width: 640px;
+    }
+  }
+
+  @media(min-width: 1024px){
+    .parent{
+      width: 1020px;
+    }
+  }
 </style>

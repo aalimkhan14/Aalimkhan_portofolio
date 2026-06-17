@@ -31,27 +31,37 @@
     display: flex;
     justify-self: center;
     justify-content: space-between;
+    padding: 32px 20px 0;
+    width: fit-content;
     gap: 32px;
-  }
-  .parent {
-    width: 1500px;
-    padding-top: 32px;
+    /* width: 1500px; */
+    
   }
   .left_side{
-    height: fit-content;
+    display: none;
   }
   .content {
     display: flex;
     flex-direction: column;
-    width: 1050px;
+    max-width: 1050px;
+    width: fit-content;
     gap: 112px;
   }
   .right_side{
-    height: fit-content;
-    position: sticky;
-    top: 32px;
+    display: none;
   }
   .space{
     height: 30px;
   }
+  @media(min-width: 1500px){
+    .left_side, .right_side{
+      display: flex;
+      height: fit-content;
+    }
+    .right_side{
+      position: sticky;
+      top: 32px;
+    }
+  }
+  
 </style>

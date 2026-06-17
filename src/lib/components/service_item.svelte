@@ -18,11 +18,11 @@
 </div>
 <style>
     .sub_parent{
-        width: 324px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 32px;
-        padding: 32px;
+        padding: 24px;
         background-color: var(--background);
         border-radius: 12px;
     }
@@ -61,6 +61,17 @@
         display: flex;  
         gap: 8px;
         align-items: center;
+    }
+
+    @media(min-width: 700px){
+        .sub_parent{
+            width: 308px;
+        }
+    }
+    @media(min-width: 1500px){
+        .sub_parent{
+            width: 324;
+        }
     }
 
 </style>

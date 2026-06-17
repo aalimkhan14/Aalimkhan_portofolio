@@ -10,6 +10,7 @@
   import Vector from "$lib/svgs/vector.svelte";
   import { onMount } from "svelte";
   import MenuItem from "./menu_item.svelte";
+    import ThemeButton from "./theme_button.svelte";
 
   let currentSection = $state('');
 
@@ -40,9 +41,7 @@
 </script>
 
 <div class="sub_parent">
-  <div class="theme">
-    <button onclick={() => isDark.update((t) => (t ? false : true))}><PaintBucket /></button>
-  </div>
+  <ThemeButton />
   <div class="menu_items">
     <MenuItem href={urls.home}><Home link="home" /></MenuItem>
     <MenuItem href={urls.service}><Vector link="service" /></MenuItem>
@@ -65,17 +64,7 @@
     border-radius: var(--radius12);
     background-color: var(--background);
   }
-  .theme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-  }
-  .theme button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
+ 
   .menu_items {
     height: fit-content;
     height: 100%;
