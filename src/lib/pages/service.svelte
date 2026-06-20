@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     font-family: "Inter", sans-serif;
-    width: 438px;
+    max-width: 438px;
     text-align: center;
     gap: 16px;
   }

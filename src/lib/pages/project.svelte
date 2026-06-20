@@ -57,6 +57,8 @@
     .catagories{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
     }
     .projects{
