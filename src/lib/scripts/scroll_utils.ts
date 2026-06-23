@@ -30,19 +30,27 @@ export function handleDownloadClick(event?: Event) {
 }
 
 
-export function handleSectionClick(event: Event | undefined, sectionId: string, mobileOffset = 50) {
-    if (event) event.preventDefault();
+export function handleSectionClick(
+	event: Event | undefined,
+	sectionId: string,
+	mobileOffset = 100
+) {
+	if (event) event.preventDefault();
 
-    const el = document.getElementById(sectionId);
+	const el = document.getElementById(sectionId);
 
-    if (el) {
-        // Same page → scroll
-        if (window.innerWidth < 768) scrollWithOffset(sectionId, mobileOffset);
-        else el.scrollIntoView({ behavior: 'smooth' });
-        history.pushState(null, '', '#' + sectionId);
-    } else {
-        window.location.href = `/#${sectionId}`;
-    }
+	if (!el) {
+		window.location.href = `/#${sectionId}`;
+		return;
+	}
+
+	if (window.innerWidth < 1500) {
+		scrollWithOffset(sectionId, mobileOffset);
+	} else {
+		el.scrollIntoView({ behavior: "smooth" });
+	}
+
+	history.pushState(null, "", "#" + sectionId);
 }
 
 

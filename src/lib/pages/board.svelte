@@ -31,7 +31,7 @@
     display: flex;
     justify-self: center;
     justify-content: space-between;
-    padding: 32px 20px 0;
+    padding: 102px 20px 0;
     width: fit-content;
     gap: 32px;
     /* width: 1500px; */
@@ -54,6 +54,9 @@
     height: 30px;
   }
   @media(min-width: 1500px){
+    .parent{
+      padding-top: 32px;
+    }
     .left_side, .right_side{
       display: flex;
       height: fit-content;

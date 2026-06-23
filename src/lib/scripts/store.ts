@@ -6,4 +6,7 @@ import { writable } from "svelte/store";
 export const store_href = writable<string>('Home');
 // Theme
 export const isDark = writable<boolean>(false);
+// menu flag in small screen
+export const isShrunk = writable<boolean>(false);
+
 

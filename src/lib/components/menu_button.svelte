@@ -1,9 +1,16 @@
 <script>
+    import { isShrunk } from "$lib/scripts/store";
+    import Cancel from "$lib/svgs/cancel.svelte";
     import Menu from "$lib/svgs/menu.svelte";
+
+    function showMenu() {
+        isShrunk.update((v) => !v);
+        console.log($isShrunk);
+    }
 </script>
 
 <div class="content">
-    <button>
+    <button onclick={showMenu}>
         <Menu />
     </button>
 </div>
