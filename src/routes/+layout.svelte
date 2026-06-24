@@ -185,8 +185,7 @@
 			z-index: 2;
 			right: 0;
 			top: 80px;
-			box-shadow: 0 0 5px 1px
-				color-mix(in srgb, var(--text_secondary) 20%, transparent);
+			box-shadow: 0 0 5px 1px color-mix(in srgb, var(--text_secondary) 20%, transparent);
 		}
 		.miniMenu nav {
 			display: flex;
