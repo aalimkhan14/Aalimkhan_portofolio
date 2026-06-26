@@ -52,7 +52,7 @@
 
 <header bind:this={header} class:expanded={$isShrunk}>
 	<div class="header_content">
-		<div class="avatar"></div>
+		<div class="avatar"><img src="src/lib/assets/picture/avatar.png" alt=""></div>
 
 		<section class="end">
 			<ThemeButton useDefaultPadding={false} />
@@ -118,7 +118,11 @@
 		width: 36px;
 		height: 36px;
 		border-radius: 50%;
-		background-color: var(--primary);
+		overflow: hidden;
+	}
+	.avatar img{
+		width: 100%;
+		object-fit: cover;
 	}
 
 	.end {

@@ -11,7 +11,7 @@
 </script>
 <div class="sub_parent">
     <div class="head">
-        <div class="picture"><img src="" alt=""></div>
+        <div class="picture"><img src="src/lib/assets/picture/avatar.png" alt=""></div>
         <div class="name">
             <div class="fullname">Aalimkhan Muradi</div>
             <div class="job"><p>Frontend Developer</p></div>
@@ -59,6 +59,14 @@
         background-color: var(--background);
         overflow: hidden;
         margin-top: 8px;
+        
+    }
+    .picture img{
+        object-fit: cover;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .picture::after{
         content: '';

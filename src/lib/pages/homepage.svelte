@@ -22,7 +22,7 @@
         >
     </div>
     <div class="picture">
-        <img src="src\lib\assets\picture\IMG_3283.png" alt="" />
+        <img src="src\lib\assets\picture\cover_picture.png" alt="" />
     </div>
 </div>
 
