@@ -7,6 +7,8 @@
   import Homepage from "./homepage.svelte";
   import Project from "./project.svelte";
   import Service from "./service.svelte";
+  import avatar from "$lib/assets/picture/avatar.png";
+  import cover_picture from "$lib/assets/picture/cover_picture.png";
 </script>
 
 <div class="parent" id="home">

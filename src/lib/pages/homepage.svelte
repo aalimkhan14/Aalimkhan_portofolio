@@ -3,6 +3,7 @@
     import { store_href } from "$lib/scripts/store";
     import { urls } from "$lib/scripts/urls";
     import RightArrow from "$lib/svgs/right_arrow.svelte";
+    import cover_picture from "$lib/assets/picture/cover_picture.png";
 </script>
 
 <div class="parent">
@@ -22,7 +23,7 @@
         >
     </div>
     <div class="picture">
-        <img src="src\lib\assets\picture\cover_picture.png" alt="" />
+        <img src={cover_picture} alt="" />
     </div>
 </div>
 

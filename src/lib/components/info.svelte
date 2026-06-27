@@ -6,12 +6,13 @@
   import Twitter from "$lib/svgs/twitter.svelte";
   import Youtube from "$lib/svgs/youtube.svelte";
   import InfoLabel from "./info_label.svelte";
+  import avatar from "$lib/assets/picture/avatar.png";
 
 
 </script>
 <div class="sub_parent">
     <div class="head">
-        <div class="picture"><img src="src/lib/assets/picture/avatar.png" alt=""></div>
+        <div class="picture"><img src={avatar} alt=""></div>
         <div class="name">
             <div class="fullname">Aalimkhan Muradi</div>
             <div class="job"><p>Frontend Developer</p></div>

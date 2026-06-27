@@ -7,6 +7,7 @@
 	import MenuButton from "$lib/components/menu_button.svelte";
 	import { handleSectionClick } from "$lib/scripts/scroll_utils";
 	import { fly } from "svelte/transition";
+	import avatar from '$lib/assets/picture/avatar.png';
 
 	let { children } = $props();
 	let header: HTMLElement;
@@ -52,7 +53,7 @@
 
 <header bind:this={header} class:expanded={$isShrunk}>
 	<div class="header_content">
-		<div class="avatar"><img src="src/lib/assets/picture/avatar.png" alt=""></div>
+		<div class="avatar"><img src={avatar} alt=""></div>
 
 		<section class="end">
 			<ThemeButton useDefaultPadding={false} />
