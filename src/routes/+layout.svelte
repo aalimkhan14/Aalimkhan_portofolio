@@ -47,9 +47,9 @@
 	});
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<link rel="icon" href={favicon} />
-</svelte:head>
+</svelte:head> -->
 
 <header bind:this={header} class:expanded={$isShrunk}>
 	<div class="header_content">
