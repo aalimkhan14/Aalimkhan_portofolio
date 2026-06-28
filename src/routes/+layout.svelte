@@ -7,7 +7,7 @@
 	import MenuButton from "$lib/components/menu_button.svelte";
 	import { handleSectionClick } from "$lib/scripts/scroll_utils";
 	import { fly } from "svelte/transition";
-	import avatar from '$lib/assets/picture/avatar.png';
+    import { avatar } from "$lib/scripts/pictures";
 
 	let { children } = $props();
 	let header: HTMLElement;

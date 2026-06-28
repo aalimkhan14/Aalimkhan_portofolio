@@ -1,9 +1,10 @@
 <script>
+    import { cover_picture } from "$lib/scripts/pictures";
     import { handleSectionClick } from "$lib/scripts/scroll_utils";
     import { store_href } from "$lib/scripts/store";
     import { urls } from "$lib/scripts/urls";
     import RightArrow from "$lib/svgs/right_arrow.svelte";
-    import cover_picture from "$lib/assets/picture/cover_picture.png";
+    // import cover_picture from "$lib/assets/picture/cover_picture.png";
 </script>
 
 <div class="parent">

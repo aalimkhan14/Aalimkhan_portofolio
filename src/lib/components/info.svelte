@@ -1,4 +1,5 @@
 <script>
+    import { avatar } from "$lib/scripts/pictures";
   import { urls } from "$lib/scripts/urls";
   import Facebook from "$lib/svgs/facebook.svelte";
   import Instagram from "$lib/svgs/instagram.svelte";
@@ -6,9 +7,6 @@
   import Twitter from "$lib/svgs/twitter.svelte";
   import Youtube from "$lib/svgs/youtube.svelte";
   import InfoLabel from "./info_label.svelte";
-  import avatar from "$lib/assets/picture/avatar.png";
-
-
 </script>
 <div class="sub_parent">
     <div class="head">
