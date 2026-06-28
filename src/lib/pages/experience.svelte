@@ -25,7 +25,7 @@
     <AcademicContent
       title='Arfoon Software Company'
       state='Junior Developer'
-      date='Jan 2026 - Now'
+      date='Jan 2026 - Jun 2026'
       certificate='Frontend Development'
       content="Junior Flutter developer building cross-platform mobile apps with a focus on responsive UI, state management, and real-world application development."
     />
