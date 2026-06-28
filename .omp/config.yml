@@ -1,0 +1,9 @@
+# Project-level OMP settings for Aalimkhan Portfolio
+modelRoles:
+  default: opencode-zen/deepseek-v4-flash-free:medium
+
+tools:
+  approvalMode: write
+  approval:
+    bash: prompt
+    edit: allow
